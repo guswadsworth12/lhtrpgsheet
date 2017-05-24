@@ -1,0 +1,68 @@
+.charsheet label {
+    display: inline-block;
+	width: 80px;
+	text-align: right;
+}
+
+.charsheet input {
+	display: inline-block;
+	width: 160px;
+}
+
+.sheet-col strong.sheet-dee {
+	font-size: 1.4em;
+	font-weight: bold;
+	padding-right: 4px;
+}
+
+.sheet-broadskill{
+	font-weight: bold;
+	font-size: 1em;
+	padding-right: 2px;
+}
+
+.charsheet input.sheet-short {
+	width: 4.5em;
+}
+
+.charsheet input[type="checkbox"].sheet-counted + span:not(.sheet-not-sheet-show)::before
+{
+    counter-increment: sheet-rep-items;
+    content: counter(sheet-rep-items) ". [+]" !important;
+}
+
+.charsheet input[type="checkbox"].sheet-counted:checked + span:not(.sheet-not-sheet-show)::before
+{
+    counter-increment: sheet-rep-items;
+    content: counter(sheet-rep-items) ". [-]" !important;
+}
+
+.charsheet input[type=text]{
+    width: 165px;
+}
+
+.charsheet {
+	background-color: #FFFFFF;
+}
+
+.charsheet table {
+    border-collapse: separate;
+    border-spacing: 1;
+    border: 1px solid black ;
+    border-radius: 10px ;
+    -moz-border-radius: 20px ;
+    padding: 10px;
+}
+
+.charsheet table td, .charsheet table th {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: left;
+    
+}
+    
+select.sheet-dtype {
+    width: 80px;
+    vertical-align: top;
+}
+

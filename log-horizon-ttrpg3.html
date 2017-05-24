@@ -1,0 +1,339 @@
+<div class="sheet-2colrow">
+	<div class="row">
+		<table style="width: 100%;">
+			<tbody>
+				<tr>
+					<td colspan="1"><p>PC Name:</p>
+					<td colspan="2"><input type="text" name="attr_character_name" /></td>
+					<td colspan="1"><p>CR:</p></td>
+					<td colspan="2"><input type="number" name="attr_rank" /></td>
+					<td colspan="1"><p>Log Tickets:</p></td>
+					<td colspan="2"><input type="text" name="attr_LT" /></td>
+				</tr>
+				<tr>
+					<td><p>Guild:</td>
+					<td><input type="text" name="attr_guild" /><td>
+					<td><p>Race:</p></td>
+					<td><input type="text" name="attr_race" /></td>
+					<td colspan="2"><p>HP:</p></td>
+					<td><input type="number" name="attr_hp" />/<input type="number" name="attr_hp_max" /></p></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<hr/>
+	<div class="sheet-row">
+		<table style="width: 100%;">
+			<tbody>
+			<tr>
+				<td><p>Weapon Range:</p></td>
+				<td><input type="number" name="attr_eweapon_range" /></td>
+				<td><p>Attack Power:</p></td>
+				<td><input type="number" name="attr_attack_power" /></td>
+				<td><p>Magic Power:</p></td>
+				<td><input type="number" name="attr_magic_power" /></td>
+			</tr>
+			<tr>
+				<td><p>Physical Defense:</p></td>
+				<td><input type="number" name="attr_pdef" /></td>
+				<td><p>Magical Defense</p></td>
+				<td><input type="numer" name="attr_mdef" /></td>
+				<td><p>Action:</p></td>
+				<td><input type="number" name="attr_action" /></td>
+			</tr>
+			<tr>
+				<td><p>Movement:</p></td>
+				<td><input type="number" name="attr_speed" /></td>
+				<td><p>Restoration Power:</p></td>
+				<td><input type="number" name="attr_restoration" /></td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+	<hr/>
+	<div class="sheet-2colrow">
+		<div class="col">
+			<div class="row">
+				<table style="width: 100%;">
+					<thead>
+						<tr>
+							<th>Attribute</th>
+							<th>Base</th>
+							<th>Mod</th>
+							<th>Max</th>
+							<th>Dice</th>
+							<th>Ability Roll</th>	
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><p>Strength</p></td>
+							<td><input type="number" name="attr_str" class="sheet-short" /></td>
+							<td><input type="number" name="attr_str_mod" class="sheet-short" /></td>
+							<td><input type="number" name="attr_str_max" value="@{str}+@{str_mod}" disabled="true"  /></td>
+							<td><input type="number" name="attr_str_dice" /></td>
+							<td><button type="roll" name="str_roll" value="( [[ @{str_dice}d6 + @{str_max} ]] )"></button>roll</td>
+						</tr>
+
+						<tr>
+							<td><p>Dex</p></td>
+							<td><input type="number" name="attr_dex" class="sheet-short" /></td>
+							<td><input type="number" name="attr_dex_mod" class="sheet-short" /></td>
+							<td><input type="number" name="attr_dex_max" value="@{dex}+@{dex_mod}" disabled="true"  /></td> 
+							<td><input type="number" name="attr_dex_dice" /></td>
+							<td><button type="roll" name="dex_roll" value="( [[ @{dex_dice}d6 + @{dex_max} ]] )"></button>roll</td>
+						</tr>
+						<tr>
+							<td><p>Pow</p></td>
+							<td><input type="number" name="attr_pow" class="sheet-short" /></td>
+							<td><input type="number" name="attr_pow_mod" class="sheet-short" /></td>
+							<td><input type="number" name="attr_pow_max" value="@{pow}+@{pow_mod}" disabled="true"  /></td>
+							<td><input type="number" name="attr_pow_dice" /></td>
+							<td><button type="roll" name="pow_roll" value="( [[ @{pow_dice}d6 + @{pow_max} ]] )"></button>roll</td>
+						</tr>
+						<tr>
+							<td><p>Int</p></td>
+							<td><input type="number" name="attr_int" class="sheet-short" />
+							<td><input type="number" name="attr_int_mod" class="sheet-short" />
+							<td><input type="number" name="attr_int_max" value="@{pow}+@{pow_mod}" disabled="true"  /></td>
+							<td><input type="number" name="attr_int_dice" /></td>
+							<td><button type="roll" name="int_roll" value="( [[ @{int_dice}d6 + @{int_max} ]] )"></button>roll</td>
+						</tr>					
+					</tbody>
+				</table>
+			</div>
+			<div class="row">
+			<hr/>
+				<table style="width: 100%;">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Base</th>	
+							<th>Mod</th>
+							<th>Max</th>
+							<th>Dice</th>
+							<th>Ability Roll</th>
+						</tr>
+					</thead>
+					<tbody>	
+						<tr> 
+							<td><p>Accuracy:</p></td>
+							<td><input type="number" name="attr_accuracy"   /></td>
+							<td><input type="number" name="attr_accuracy_mod" class="sheet-short" /></td>
+							<td><input type="number" name="attr_accuracy_max" value="(@accuracy)+(@accuracy_mod)" disabled="true"  /></td>
+							<td><input type="number" name="attr_accuracy_dice" /></td>
+							<td><button type="roll" name="accuracy_roll" value="( [[ @{accuracy_dice}d6 + @{accuracy_max} ]] )"></button>roll</td>
+						</tr>
+						<tr> 
+							<td><p>Evasion:</p></td>
+							<td><input type="number" name="attr_evasion" class="sheet-short" /></td>
+							<td><input type="number" name="attr_evasion_mod" class="sheet-short" /></td>
+							<td><input type="number" name="attr_evasion_max" value="@{evasion+@{evasion_mod}" disabled="true"  /></td>
+							<td><input type="number" name="attr_evasion_dice" /></td>
+							<td><button type="roll" name="negotiation_roll" value="( [[ @{evasion_dice}d6 + @{evasion_max} ]] )"></button>roll</td>
+						</tr>
+						<tr> 
+							<td><p>Resistance</p></td>
+							<td><input type="number" name="attr_resistance" class="sheet-short" /></td>
+							<td><input type="number" name="attr_resistance_mod" class="sheet-short" /></td>
+							<td><input type="number" name="attr_resistance_max" value="@{resistance}+@{resistance_mod}" disabled="true"  /></td>
+							<td><input type="number" name="attr_resistance_dice" /></td>
+							<td><button type="roll" name="resistance_roll" value="( [[ @{resistance_dice}d6 + @{resistance_max} ]] )"></button>roll</td>
+						</tr>			
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="col">
+			<table style="width: 100%;">
+				<thead>
+					<tr>
+						<th>Attribute</th>
+						<th>Base</th>
+						<th>Mod</th>
+						<th>Max</th>
+						<th>Dice</th>	
+					</tr>
+				</thead>
+				<tbody>
+					<tr style="text-align: center">
+						<td colspan="6">Derived from Strength</td>
+					</tr>
+					<tr>
+						<td><p>Athletics</p></td>
+						<td><input type="number" name="attr_athletics" value="@{str_max}" disabled="true" />
+						<td><input type="number" name="attr_athletics_mod" class="sheet-short" /></td>
+						<td><input type="number" name="attr_athletics_max" value="@{athletics}+@{atletics_mod}" disabled="true"  /></td>
+						<td><input type="number" name="attr_athletics_dice" /></td>
+						<td><button type="roll" name="athletics_roll" value="( [[ @{athletics_dice}d6 + @{athletics_max} ]] )"></button>roll</td>
+					</tr>
+					<tr>
+						<td><p>Endurance</p></td>
+						<td><input type="number" name="attr_endurance" value="@{str_max}" disabled="true" />
+						<td><input type="number" name="attr_endurance_mod" class="sheet-short" /></td>
+						<td><input type="number" name="attr_endurance_max" value="@{endurance}+@{endurance_mod}" disabled="true"  /></td>
+						<td><input type="number" name="attr_endurance_dice" /></td>
+						<td><button type="roll" name="endurance_roll" value="( [[ @{endurance_dice}d6 + @{endurance_max} ]] )"></button>roll</td>
+					</tr>
+					<tr style="text-align: center">
+						<td colspan="6">Derived from Dexterity</td>
+					</tr>
+					<tr>
+						<td><p>Disable</p></td>
+						<td><input type="number" name="attr_disable" value="@{dex_max}" disabled="true" />
+						<td><input type="number" name="attr_disable_mod" class="sheet-short" /></td>
+						<td><input type="number" name="attr_disable_max" value="@{disable}+@{disable_mod}" disabled="true"  /></td>
+						<td><input type="number" name="attr_disable_dice" /></td>
+						<td><button type="roll" name="disable_roll" value="( [[ @{disable_dice}d6 + @{disable_max} ]] )"></button>roll</td>
+					</tr>
+					<tr>
+						<td><p>Operate</p></td>
+						<td><input type="number" name="attr_operate" value="@{dex_max}" disabled="true" /></td>
+						<td><input type="number" name="attr_operate_mod" class="sheet-short" /></td>
+						<td><input type="number" name="attr_operate_max" value="@{operate}+@{operate_mod}" disabled="true"  /></td>
+						<td><input type="number" name="attr_operate_dice" /></td>
+						<td><button type="roll" name="operate_roll" value="( [[ @{operate_dice}d6 + @{operate_max} ]] )"></button>roll</td>
+					</tr>
+					<tr style="text-align: center">
+						<td colspan="6">Derived from Intelligence</td>
+					</tr>
+					<tr>
+						<td><p>Knowledge</p></td>
+						<td><input type="number" name="attr_knowledge" value="@{int_max}" disabled="true" /></td>
+						<td><input type="number" name="attr_knowledge_mod" class="sheet-short" /></td>
+						<td><input type="number" name="attr_knowledge_max" value="@{knowledge}+@{knowledge_mod}" disabled="true"  /></td>
+						<td><input type="number" name="attr_knowledge_dice" /></td>
+						<td><button type="roll" name="knowledge_roll" value="( [[ @{knowledge_dice}d6 + @{knowledge_max} ]] )"></button>roll</td>
+					</tr>
+					<tr>
+						<td><p>Analyze</p></td>
+						<td><input type="number" name="attr_analyze" value="@{int_max}" disabled="true" /></td>
+						<td><input type="number" name="attr_analyze_mod" class="sheet-short" /></td>
+						<td><input type="number" name="attr_analyze_max" value="@{analyze}+@{analyze_mod}" disabled="true"  /></td>
+						<td><input type="number" name="attr_analyze_dice" /></td>
+						<td><button type="roll" name="analyze_roll" value="( [[ @{analyze_dice}d6 + @{analyze_max} ]] )"></button>roll</td>
+					</tr>
+					<tr style="text-align: center">
+						<td colspan="6">Derived from Power</td>
+					</tr>
+					<tr>
+						<td><p>Perception</p></td>
+						<td><input type="number" name="attr_perception" value="@{pow_max}" disabled="true" /></td>
+						<td><input type="number" name="attr_perception_mod" class="sheet-short" /></td>
+						<td><input type="number" name="attr_perception_max" value="@{perception}+@{perception_mod}" disabled="true"  /></td>
+						<td><input type="number" name="attr_perception_dice" /></td>
+						<td><button type="roll" name="perception_roll" value="( [[ @{perception_dice}d6 + @{perception_max} ]] )"></button>roll</td>
+					</tr>
+					<tr>
+						<td><p>Negotiation</p></td>
+						<td><input type="number" name="attr_negotiation" value="@{pow_max}" disabled="true" /></td>
+						<td><input type="number" name="attr_negotiation_mod" class="sheet-short" /></td>
+						<td><input type="number" name="attr_negotiation_max" value="@{negotiation}+@{negotiation_mod)" disabled="true"  /></td>
+						<td><input type="number" name="attr_negotiation_dice" /></td>
+						<td><button type="roll" name="negotiation_roll" value="( [[ @{negotiation_dice}d6 + @{negotiation_max} ]] )"></button>roll</td>
+					</tr>
+			</table>
+		</div>
+	</div>	
+</div>
+	<div class="row">
+		<hr/>
+
+		<h3>Skills</h3>
+			
+			<fieldset class="repeating_skills">  
+				<table style="width: 100%">
+					<tbody>
+						<tr>
+						<td>Name</td>
+						<td><input type="text" name="attr_skillname" /></td>
+						<td>SR</td>
+						<td><input type="number" name="attr_skill_rank" /></td>
+						</tr>
+						<tr>
+						<td>Tags</td>
+						<td><input type="text" name="attr_skill_tag1" /></td>
+						<td><input type="text" name="attr_skill_tag2" /></td>
+						<td><input type="text" name="attr_skill_tag3" /></td>
+						</tr>
+						<tr>
+						<td>Timing</td>
+						<td><input type="text" name="attr_skill_timing" /></td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						</tr>
+						<tr>
+						<td>Check</td>
+						<td><input type="text" name="attr_skill_check" /></td>
+						<td>Range</td>
+						<td><input type="text" name="attr_skill_range" /></td>
+						</tr>
+						<tr>
+						<td>Cost</td>
+						<td><input type="text" name="attr_skill_cost" /></td>
+						<td>Action</td>
+						<td><input type="text" name="attr_skill_action" /></td>
+						</tr>
+						<tr>
+						<td>Effect</td>
+						<td colspan="3"><textarea name="attr_skill_effect"></textarea></td>
+						</tr>
+						<tr>
+					</tbody>
+				</table>       
+			</fieldset>
+	</div>
+	<div class="row">
+		<hr/>
+		<h3>Inventory</h3>
+		<div class="sheet-2colrow">
+			<div class="col">
+				<h2>weapons</h2>
+				<fieldset class="reapeating_items">
+					<table style="width: 50%">
+					
+						<tbody>
+							<tr>
+								<td>Name:</td>
+								<td><input type="text" name="attr_weapon_name"><td>
+							</tr>
+							<tr>
+								<td>CR:</td>
+								<td><input type="number" name="attr_weapon_cr"></td>
+							</tr>							
+							<tr>
+								<td>Tags:</td>
+								<td><input type="text" name="attr_weapon_tags"><td>
+							</tr>
+							<tr>
+								<td>Attack:</td>
+								<td><input type="number" name="attr_weapon_attack"><td>
+							</tr>
+							<tr>
+								<td>Magic:</td>
+								<td><input type="number" name="attr_weapon_magic"><td>
+							</tr>
+							<tr>
+								<td>Accuracy:</td>
+								<td><input type="number" name="attr_weapon_accuracy"><td>
+							</tr>
+							<tr>
+								<td>Initiative:</td>
+								<td><input type="number" name="attr_weapon_initiative"><td>
+							</tr>
+							<tr>
+								<td>Range:</td>
+								<td><input type="text" name="attr_weapon_range"><td>
+							<tr>
+								<td>Description:</td>
+								<td><input type="text" name="attr_weapon_description"><td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+			</div>
+			<div class="sheet-col">
+			</div>
+		</div>
+	</div>
+</div>
