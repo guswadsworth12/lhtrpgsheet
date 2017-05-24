@@ -163,7 +163,7 @@
 						<td><p>Athletics</p></td>
 						<td><input type="number" name="attr_athletics" value="@{str_max}" disabled="true" />
 						<td><input type="number" name="attr_athletics_mod" class="sheet-short" /></td>
-						<td><input type="number" name="attr_athletics_max" value="@{athletics}+@{atletics_mod}" disabled="true"  /></td>
+						<td><input type="number" name="attr_athletics_max" value="@{athletics}+@{athletics_mod}" disabled="true"  /></td>
 						<td><input type="number" name="attr_athletics_dice" /></td>
 						<td><button type="roll" name="athletics_roll" value="( [[ @{athletics_dice}d6 + @{athletics_max} ]] )"></button>roll</td>
 					</tr>
@@ -259,8 +259,8 @@
 						<tr>
 						<td>Timing</td>
 						<td><input type="text" name="attr_skill_timing" /></td>
-						<td>&nbsp;</td>
-						<td>&nbsp;</td>
+						<td>Target</td>
+						<td><input type="text" name="attr_skill_target" /></td>
 						</tr>
 						<tr>
 						<td>Check</td>
@@ -271,8 +271,8 @@
 						<tr>
 						<td>Cost</td>
 						<td><input type="text" name="attr_skill_cost" /></td>
-						<td>Action</td>
-						<td><input type="text" name="attr_skill_action" /></td>
+						<td>Limit</td>
+						<td><input type="text" name="attr_skill_limit" /></td>
 						</tr>
 						<tr>
 						<td>Effect</td>
@@ -289,39 +289,30 @@
 		<div class="sheet-2colrow">
 			<div class="col">
 				<h2>weapons</h2>
-				<fieldset class="reapeating_items">
-					<table style="width: 50%">
-					
+				<fieldset class="repeating_items">
+					<table style="width: 100%">
 						<tbody>
 							<tr>
 								<td>Name:</td>
 								<td><input type="text" name="attr_weapon_name"><td>
-							</tr>
-							<tr>
 								<td>CR:</td>
 								<td><input type="number" name="attr_weapon_cr"></td>
 							</tr>							
 							<tr>
 								<td>Tags:</td>
 								<td><input type="text" name="attr_weapon_tags"><td>
-							</tr>
-							<tr>
 								<td>Attack:</td>
 								<td><input type="number" name="attr_weapon_attack"><td>
 							</tr>
 							<tr>
 								<td>Magic:</td>
 								<td><input type="number" name="attr_weapon_magic"><td>
-							</tr>
-							<tr>
 								<td>Accuracy:</td>
 								<td><input type="number" name="attr_weapon_accuracy"><td>
 							</tr>
 							<tr>
 								<td>Initiative:</td>
 								<td><input type="number" name="attr_weapon_initiative"><td>
-							</tr>
-							<tr>
 								<td>Range:</td>
 								<td><input type="text" name="attr_weapon_range"><td>
 							<tr>
@@ -331,8 +322,6 @@
 						</tbody>
 					</table>
 				</fieldset>
-			</div>
-			<div class="sheet-col">
 			</div>
 		</div>
 	</div>
